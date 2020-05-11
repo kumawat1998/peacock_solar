@@ -6,6 +6,9 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.mycode.formclass.User_form;
 
 import java.util.regex.Pattern;
 
@@ -24,9 +27,14 @@ public class MainActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               validateEmail(emailAddress);
-                validateName(name);
-                validateAddress(address);
+               if(!validateEmail(emailAddress)|
+                !validateName(name)|
+                !validateAddress(address)) {
+                   Toast.makeText(MainActivity.this, "Form is not submitted", Toast.LENGTH_SHORT).show();
+                   return;
+               }
+               User_form form=new User_form(emailAddress.getText().toString().trim(),name.getText().toString().trim(),address.getText().toString().trim());
+                Toast.makeText(MainActivity.this, name.getText().toString().trim()+"\n"+emailAddress.getText().toString().trim()+"\n"+address.getText().toString().trim(), Toast.LENGTH_SHORT).show();
             }
         });
 

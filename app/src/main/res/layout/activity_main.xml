@@ -47,9 +47,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="157dp"
-        android:layout_marginRight="157dp"
-        android:layout_marginBottom="110dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginRight="133dp"
+        android:layout_marginBottom="106dp"
         android:background="#00BCD4"
         android:text="Submit" />
 
@@ -84,4 +84,5 @@
         android:layout_marginBottom="3dp"
         android:text="Address"
         android:textSize="20dp" />
+
 </RelativeLayout>
